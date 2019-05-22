@@ -37,6 +37,29 @@ class _bmiStatefulWidgetPage extends State<StatefulWidget> {
   var weight = TextEditingController();
   var result = 0.0;
 
+  void _showDialog(bmi) {
+    // flutter defined function
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return AlertDialog(
+          title: new Text("Result"),
+          content: new Text(bmi),
+          actions: <Widget>[
+            // usually buttons at the bottom of the dialog
+            new FlatButton(
+              child: new Text("Close"),
+              onPressed: () {
+                Navigator.of(context, rootNavigator: true).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -72,15 +95,13 @@ class _bmiStatefulWidgetPage extends State<StatefulWidget> {
                 )
               ),
             ),
-            Text(
-              'You BMI 為 $result',
-            ),
             OutlineButton(
               child: Text('計算'),
               onPressed: () {
                 setState(() {
                   result = double.parse(weight.text) /
-                    pow(double.parse(height.text) / 100.0, 2);
+                  pow(double.parse(height.text) / 100.0, 2);
+                  _showDialog(result.toString());
                 });
               },
             )

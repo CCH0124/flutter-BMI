@@ -15,6 +15,9 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.io/docs), which offers tutorials, 
 samples, guidance on mobile development, and a full API reference.
 
+## Features
+新增彈跳視窗
+
 ## Screen
 
-![](https://i.imgur.com/ZSDr7hW.png)
+![](https://i.imgur.com/X30JNFl.png)
