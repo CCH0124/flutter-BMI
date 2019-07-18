@@ -78,6 +78,7 @@ class _bmiStatefulWidgetPage extends State<StatefulWidget> {
               decoration: InputDecoration( // 輸入外觀顯示
                   hintText: 'Inpute Height(cm)', // 文字背景提示，當有文字時會消失
                   labelText: 'Height', // 輸入框上方的文字，當聚焦此會稍微往上移動並變色
+                  helperText: '輸入身高',
                   labelStyle: TextStyle(
                     color: Colors.red,
                   )
@@ -90,6 +91,7 @@ class _bmiStatefulWidgetPage extends State<StatefulWidget> {
               decoration: InputDecoration(
                 hintText: 'Inpute Weight(kg)',
                 labelText: 'Weight',
+                helperText: '輸入體重',
                 labelStyle: TextStyle(
                   color: Colors.red,
                 )
